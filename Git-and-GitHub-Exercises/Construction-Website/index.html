@@ -3,86 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Luma Dental Studio offers gentle, modern dental care for the whole family.">
+    <meta name="description" content="Luma Dental Studio offers gentle, modern dental care for the whole family in Sofia.">
+    <meta name="theme-color" content="#173f3b">
     <title>Luma Dental Studio | Care that feels different</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
-        <a class="brand" href="index.html" aria-label="Luma Dental Studio home"><span class="brand-mark">L</span><span>Luma<small>Dental Studio</small></span></a>
-        <nav aria-label="Main navigation">
-            <a class="active" href="index.html" aria-current="page">Home</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+        <a class="brand" href="#home" data-tab="home" aria-label="Luma Dental Studio home"><span class="brand-mark">L</span><span>Luma<small>Dental Studio</small></span></a>
+        <nav class="tab-list" aria-label="Main navigation" role="tablist">
+            <a id="tab-home" role="tab" aria-controls="home" aria-selected="true" class="active" href="#home" data-tab="home">Home</a>
+            <a id="tab-services" role="tab" aria-controls="services" aria-selected="false" tabindex="-1" href="#services" data-tab="services">Services</a>
+            <a id="tab-about" role="tab" aria-controls="about" aria-selected="false" tabindex="-1" href="#about" data-tab="about">About</a>
+            <a id="tab-contact" role="tab" aria-controls="contact" aria-selected="false" tabindex="-1" href="#contact" data-tab="contact">Contact</a>
         </nav>
-        <a class="button button-small" href="#contact">Book a visit <span aria-hidden="true">↗</span></a>
+        <a class="button button-small" href="#enquiry">Book a visit <span aria-hidden="true">↗</span></a>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-visual" role="img" aria-label="A calm, modern dental studio"><span class="visual-ring"></span><span class="visual-card"><strong>Gentle care</strong><small>Designed around you</small></span></div>
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <p class="eyebrow"><span></span> Thoughtful dentistry, beautifully simple</p>
-                <h1>Care that gives you a reason to <em>smile.</em></h1>
-                <p>Comfort-first dentistry, clear answers, and care designed around you—not the other way around.</p>
-                <div class="hero-actions">
-                    <a class="button" href="#contact">Book an appointment <span aria-hidden="true">→</span></a>
-                    <a class="text-link" href="#services">Explore our services <span aria-hidden="true">↗</span></a>
+    <main id="main-content">
+        <div id="home" class="tab-panel" role="tabpanel" aria-labelledby="tab-home">
+            <section class="hero">
+                <div class="hero-visual" role="img" aria-label="A calm, modern dental studio"><span class="visual-ring"></span><span class="visual-card"><strong>Gentle care</strong><small>Designed around you</small></span></div>
+                <div class="hero-content">
+                    <p class="eyebrow"><span></span> Thoughtful dentistry, beautifully simple</p>
+                    <h1>Care that gives you a reason to <em>smile.</em></h1>
+                    <p>Comfort-first dentistry, clear answers, and care designed around you—not the other way around.</p>
+                    <div class="hero-actions"><a class="button" href="#enquiry">Book an appointment <span aria-hidden="true">→</span></a><a class="text-link" href="#services" data-tab="services">Explore our services <span aria-hidden="true">↗</span></a></div>
+                    <div class="trust-row"><div><strong>4.9</strong><span class="stars" aria-label="4.9 out of 5 stars">★★★★★</span><small>200+ patient reviews</small></div><div><strong>15+</strong><small>Years of trusted care</small></div><div><strong>7k+</strong><small>Healthy smiles</small></div></div>
                 </div>
-                <div class="trust-row">
-                    <div><strong>4.9</strong><span class="stars" aria-label="4.9 out of 5 stars">★★★★★</span><small>200+ patient reviews</small></div>
-                    <div><strong>15+</strong><small>Years of trusted care</small></div>
-                    <div><strong>7k+</strong><small>Healthy smiles</small></div>
+            </section>
+            <section class="intro section"><div><p class="eyebrow"><span></span> Your smile, our purpose</p><h2>Modern care with a <em>human touch.</em></h2></div><div class="intro-copy"><p>We believe great dentistry starts with listening. From your first visit, our team makes space for your questions, your comfort, and your goals.</p><a class="text-link dark" href="#about" data-tab="about">Get to know our studio <span aria-hidden="true">→</span></a></div></section>
+            <section class="services-preview section">
+                <div class="section-heading"><div><p class="eyebrow"><span></span> What we do</p><h2>Everything your smile needs.</h2></div><a class="text-link dark" href="#services" data-tab="services">View all services <span aria-hidden="true">→</span></a></div>
+                <div class="service-grid"><article class="service-card"><span class="service-number">01</span><div class="icon">✦</div><h3>Preventive care</h3><p>Gentle checkups and hygiene visits that keep small concerns from becoming big ones.</p><a href="#preventive" aria-label="Learn about preventive care">↗</a></article><article class="service-card featured"><span class="service-number">02</span><div class="icon">◡</div><h3>Cosmetic dentistry</h3><p>Natural-looking whitening, bonding, and veneers shaped around your features.</p><a href="#cosmetic" aria-label="Learn about cosmetic dentistry">↗</a></article><article class="service-card"><span class="service-number">03</span><div class="icon">◇</div><h3>Restorative care</h3><p>Comfortable, lasting solutions that restore strength, function, and confidence.</p><a href="#restorative" aria-label="Learn about restorative care">↗</a></article></div>
+            </section>
+            <section class="promise section"><div class="promise-card"><p class="eyebrow light"><span></span> The Luma difference</p><h2>Less clinical.<br><em>More comfortable.</em></h2><p>Calm spaces, unrushed appointments, and technology that makes treatment simpler.</p><ul><li><span>✓</span> Clear plans and transparent fees</li><li><span>✓</span> Gentle care at your pace</li><li><span>✓</span> Same-day emergency visits</li></ul><a class="button button-light" href="#enquiry">Plan your first visit <span>→</span></a></div><div class="quote-card"><span class="quote-mark">“</span><blockquote>For the first time, I left a dental appointment feeling genuinely relaxed. Every step was explained, and I never felt rushed.</blockquote><div class="patient"><span>AM</span><div><strong>Amelia M.</strong><small>Luma patient since 2021</small></div></div></div></section>
+            <section class="cta section"><p class="eyebrow"><span></span> Ready when you are</p><h2>Let’s make your next dental visit a <em>good one.</em></h2><a class="button" href="tel:+35924901234">Call +359 2 490 1234 <span>→</span></a></section>
+        </div>
+
+        <div id="services" class="tab-panel" role="tabpanel" aria-labelledby="tab-services" hidden>
+            <section class="services-hero"><div class="services-hero-copy"><p class="eyebrow light"><span></span> Complete dental care</p><h1>Care for every chapter of your <em>smile.</em></h1><p>From routine checkups to a complete smile restoration, every treatment begins with a conversation and a plan made for you.</p></div><aside class="care-note" aria-label="Our approach to care"><span class="care-note-number">01—06</span><div class="care-note-mark" aria-hidden="true">✦</div><p>Six ways we help you feel healthy, comfortable, and confident.</p><a class="text-link" href="#all-services">Explore treatments <span aria-hidden="true">↓</span></a></aside></section>
+            <section class="service-directory section" id="all-services"><div class="service-directory-intro"><div><p class="eyebrow"><span></span> Our services</p><h2>Everything you need,<br><em>all in one place.</em></h2></div><p>Clear explanations, modern techniques, and thoughtful care at every visit. We will always walk you through your options before treatment begins.</p></div>
+                <div class="service-list">
+                    <article class="service-detail" id="preventive"><div class="service-detail-heading"><span class="service-number">01</span><span class="detail-icon" aria-hidden="true">✦</span><h3>Preventive care</h3></div><p>Keep your smile healthy with gentle, consistent care that spots concerns early.</p><ul><li>Comprehensive checkups</li><li>Professional hygiene</li><li>Digital X-rays</li><li>Gum health support</li></ul></article>
+                    <article class="service-detail featured-detail" id="cosmetic"><div class="service-detail-heading"><span class="service-number">02</span><span class="detail-icon" aria-hidden="true">◡</span><h3>Cosmetic dentistry</h3></div><p>Subtle, natural-looking enhancements designed to suit your smile and your features.</p><ul><li>Professional whitening</li><li>Composite bonding</li><li>Porcelain veneers</li><li>Smile planning</li></ul></article>
+                    <article class="service-detail" id="restorative"><div class="service-detail-heading"><span class="service-number">03</span><span class="detail-icon" aria-hidden="true">◇</span><h3>Restorative care</h3></div><p>Comfortable, lasting solutions that bring back strength, function, and confidence.</p><ul><li>Tooth-coloured fillings</li><li>Crowns and bridges</li><li>Root canal treatment</li><li>Full-mouth restoration</li></ul></article>
+                    <article class="service-detail" id="implants"><div class="service-detail-heading"><span class="service-number">04</span><span class="detail-icon" aria-hidden="true">○</span><h3>Dental implants</h3></div><p>A secure, natural-feeling way to replace a missing tooth or rebuild your smile.</p><ul><li>Implant consultations</li><li>Single-tooth implants</li><li>Implant-supported bridges</li><li>Aftercare and maintenance</li></ul></article>
+                    <article class="service-detail" id="family"><div class="service-detail-heading"><span class="service-number">05</span><span class="detail-icon" aria-hidden="true">⌁</span><h3>Family dentistry</h3></div><p>Relaxed, positive visits that help every member of your family feel at ease.</p><ul><li>Children's checkups</li><li>Fissure sealants</li><li>Oral health guidance</li><li>Care through every life stage</li></ul></article>
+                    <article class="service-detail" id="emergency"><div class="service-detail-heading"><span class="service-number">06</span><span class="detail-icon" aria-hidden="true">+</span><h3>Emergency care</h3></div><p>Prompt help, a clear diagnosis, and relief when an unexpected dental problem occurs.</p><ul><li>Same-day appointments</li><li>Toothache relief</li><li>Broken tooth repair</li><li>Urgent assessments</li></ul></article>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section class="visit-process section"><div class="process-heading"><p class="eyebrow light"><span></span> What to expect</p><h2>A simpler path to feeling <em>your best.</em></h2></div><ol class="process-steps"><li><span>01</span><div><h3>We listen</h3><p>Tell us what is bothering you, what you want to change, and what helps you feel comfortable.</p></div></li><li><span>02</span><div><h3>We make it clear</h3><p>You will receive straightforward options, transparent costs, and time to ask every question.</p></div></li><li><span>03</span><div><h3>We move at your pace</h3><p>Your care plan fits your priorities, schedule, and comfort—never the other way around.</p></div></li></ol></section>
+            <section class="cta section"><p class="eyebrow"><span></span> Not sure where to start?</p><h2>Tell us what you need. We’ll help you find the <em>right next step.</em></h2><div class="cta-actions"><a class="button" href="tel:+35924901234">Call +359 2 490 1234 <span aria-hidden="true">→</span></a><a class="text-link dark" href="mailto:hello@lumadental.bg">Email our team <span aria-hidden="true">↗</span></a></div></section>
+        </div>
 
-        <section class="intro section" id="about">
-            <div>
-                <p class="eyebrow"><span></span> Your smile, our purpose</p>
-                <h2>Modern care with a <em>human touch.</em></h2>
-            </div>
-            <div class="intro-copy">
-                <p>We believe great dentistry starts with listening. From your first visit, our team makes space for your questions, your comfort, and your goals.</p>
-                <a class="text-link dark" href="#contact">Get to know our studio <span aria-hidden="true">→</span></a>
-            </div>
-        </section>
+        <div id="about" class="tab-panel" role="tabpanel" aria-labelledby="tab-about" hidden>
+            <section class="about-hero"><div class="about-hero-copy"><p class="eyebrow light"><span></span> This is Luma</p><h1>Good dentistry starts with feeling <em>understood.</em></h1><p>We created Luma to make dental care feel calmer, clearer, and genuinely human—from the moment you walk in.</p></div><div class="about-portrait" role="img" aria-label="Abstract portrait representing the warm and welcoming Luma team"><span class="portrait-orbit"></span><span class="portrait-figure"><i></i></span><span class="portrait-caption"><strong>Care, made personal.</strong><small>Sofia · Since 2011</small></span></div></section>
+            <section class="our-story section"><div class="story-heading"><p class="eyebrow"><span></span> Our story</p><h2>Built around a better kind of <em>dental visit.</em></h2></div><div class="story-copy"><p class="story-lead">Luma began with a simple belief: excellent clinical care and a genuinely comfortable experience should always belong together.</p><p>In 2011, Dr. Elena Marin opened our first studio with one treatment room and a determination to do things differently. No rushed conversations. No confusing treatment plans. No one-size-fits-all care.</p><p>Today, our team brings together different areas of expertise under one roof, while keeping that original promise at the heart of every appointment: listen carefully, explain clearly, and care thoughtfully.</p><div class="signature"><span>EM</span><div><strong>Dr. Elena Marin</strong><small>Founder &amp; Clinical Director</small></div></div></div></section>
+            <section class="values section"><div class="values-heading"><p class="eyebrow light"><span></span> What guides us</p><h2>The little things are the <em>big things.</em></h2></div><div class="value-grid"><article><span>01</span><div class="value-icon" aria-hidden="true">○</div><h3>Listen first</h3><p>Your concerns, goals, and past experiences shape the care we recommend.</p></article><article><span>02</span><div class="value-icon" aria-hidden="true">◇</div><h3>Keep it clear</h3><p>Honest advice, understandable options, and transparent fees—always.</p></article><article><span>03</span><div class="value-icon" aria-hidden="true">⌁</div><h3>Move gently</h3><p>Unhurried appointments and thoughtful techniques help you feel at ease.</p></article><article><span>04</span><div class="value-icon" aria-hidden="true">✦</div><h3>Care for the long term</h3><p>We choose solutions that protect your health and confidence for years to come.</p></article></div></section>
+            <section class="team section"><div class="section-heading team-heading"><div><p class="eyebrow"><span></span> Meet the team</p><h2>Skilled hands.<br><em>Kind people.</em></h2></div><p>Our clinicians and care team share one goal: making every visit feel informed, comfortable, and entirely yours.</p></div><div class="team-grid"><article class="team-card"><div class="team-avatar"><span>EM</span><i></i></div><div class="team-info"><span>Founder · General &amp; Cosmetic Dentistry</span><h3>Dr. Elena Marin</h3><p>Elena pairs a meticulous clinical eye with a calm, reassuring approach that puts even nervous patients at ease.</p></div></article><article class="team-card"><div class="team-avatar"><span>NP</span><i></i></div><div class="team-info"><span>Restorative Dentistry &amp; Implants</span><h3>Dr. Nikolay Petrov</h3><p>Nikolay focuses on durable, natural-feeling solutions and treatment plans that make complex care feel simple.</p></div></article><article class="team-card"><div class="team-avatar"><span>IS</span><i></i></div><div class="team-info"><span>Hygiene &amp; Preventive Care</span><h3>Ivana Stoyanova</h3><p>Ivana helps patients build practical, positive routines for healthier smiles between visits.</p></div></article></div></section>
+            <section class="milestones" aria-label="Luma Dental Studio milestones"><div><strong>15+</strong><span>Years of trusted care</span></div><div><strong>7k+</strong><span>Healthy smiles</span></div><div><strong>4.9</strong><span>Average patient rating</span></div><div><strong>6</strong><span>Areas of care</span></div></section>
+            <section class="cta section"><p class="eyebrow"><span></span> Come say hello</p><h2>Your first visit starts with a <em>conversation.</em></h2><div class="cta-actions"><a class="button" href="tel:+35924901234">Call +359 2 490 1234 <span aria-hidden="true">→</span></a><a class="text-link dark" href="#services" data-tab="services">Explore our services <span aria-hidden="true">↗</span></a></div></section>
+        </div>
 
-        <section class="services-preview section" id="services">
-            <div class="section-heading">
-                <div><p class="eyebrow"><span></span> What we do</p><h2>Everything your smile needs.</h2></div>
-                <a class="text-link dark" href="#contact">Ask about a treatment <span aria-hidden="true">→</span></a>
-            </div>
-            <div class="service-grid">
-                <article class="service-card"><span class="service-number">01</span><div class="icon">✦</div><h3>Preventive care</h3><p>Gentle checkups and hygiene visits that keep small concerns from becoming big ones.</p><a href="#contact" aria-label="Ask about preventive care">↗</a></article>
-                <article class="service-card featured"><span class="service-number">02</span><div class="icon">◡</div><h3>Cosmetic dentistry</h3><p>Natural-looking whitening, bonding, and veneers shaped around your features.</p><a href="#contact" aria-label="Ask about cosmetic dentistry">↗</a></article>
-                <article class="service-card"><span class="service-number">03</span><div class="icon">◇</div><h3>Restorative care</h3><p>Comfortable, lasting solutions that restore strength, function, and confidence.</p><a href="#contact" aria-label="Ask about restorative care">↗</a></article>
-            </div>
-        </section>
-
-        <section class="promise section">
-            <div class="promise-card">
-                <p class="eyebrow light"><span></span> The Luma difference</p>
-                <h2>Less clinical.<br><em>More comfortable.</em></h2>
-                <p>Calm spaces, unrushed appointments, and technology that makes treatment simpler.</p>
-                <ul><li><span>✓</span> Clear plans and transparent fees</li><li><span>✓</span> Gentle care at your pace</li><li><span>✓</span> Same-day emergency visits</li></ul>
-                <a class="button button-light" href="#contact">Plan your first visit <span>→</span></a>
-            </div>
-            <div class="quote-card"><span class="quote-mark">“</span><blockquote>For the first time, I left a dental appointment feeling genuinely relaxed. Every step was explained, and I never felt rushed.</blockquote><div class="patient"><span>AM</span><div><strong>Amelia M.</strong><small>Luma patient since 2021</small></div></div></div>
-        </section>
-
-        <section class="cta section" id="contact">
-            <p class="eyebrow"><span></span> Ready when you are</p>
-            <h2>Let’s make your next dental visit a <em>good one.</em></h2>
-            <a class="button" href="tel:+35924901234">Call +359 2 490 1234 <span>→</span></a>
-        </section>
+        <div id="contact" class="tab-panel" role="tabpanel" aria-labelledby="tab-contact" hidden>
+            <section class="contact-hero"><div><p class="eyebrow light"><span></span> We’re here to help</p><h1>Let’s talk about your <em>smile.</em></h1><p>Whether you are ready to book, need some guidance, or simply have a question, our friendly care team will point you in the right direction.</p></div><div class="contact-quick-links"><a href="tel:+35924901234"><span>Call us</span><strong>+359 2 490 1234</strong><i aria-hidden="true">↗</i></a><a href="mailto:hello@lumadental.bg"><span>Email us</span><strong>hello@lumadental.bg</strong><i aria-hidden="true">↗</i></a><div><span>Visit us</span><strong>48 Linden Avenue<br>Sofia, Bulgaria</strong></div></div></section>
+            <section class="contact-main section" id="enquiry"><div class="enquiry-intro"><p class="eyebrow"><span></span> Send an enquiry</p><h2>Tell us how we can <em>help.</em></h2><p>Share a few details and your preferred way to be contacted. Our team usually responds within one working day.</p><div class="response-note"><span aria-hidden="true">✦</span><p><strong>Need urgent care?</strong> Please call us directly so we can help as quickly as possible.</p></div></div><form class="contact-form" action="mailto:hello@lumadental.bg" method="post" enctype="text/plain"><div class="form-row"><label>First name<input type="text" name="first-name" autocomplete="given-name" required></label><label>Last name<input type="text" name="last-name" autocomplete="family-name" required></label></div><div class="form-row"><label>Email address<input type="email" name="email" autocomplete="email" required></label><label>Phone number<input type="tel" name="phone" autocomplete="tel"></label></div><label>What can we help with?<select name="reason" required><option value="" selected disabled>Choose a reason</option><option>Book a first visit</option><option>Routine checkup</option><option>Cosmetic treatment</option><option>Dental discomfort or emergency</option><option>Something else</option></select></label><label>Your message<textarea name="message" rows="5" placeholder="Tell us a little about what you need…" required></textarea></label><label class="consent"><input type="checkbox" name="consent" required><span>I agree that Luma Dental Studio may use these details to respond to my enquiry.</span></label><button class="button form-submit" type="submit">Send enquiry <span aria-hidden="true">→</span></button><small class="form-note">Submitting opens your default email application with these details.</small></form></section>
+            <section class="visit-section section"><div class="visit-map" role="img" aria-label="Stylised map showing Luma Dental Studio at 48 Linden Avenue in Sofia"><span class="road road-one"></span><span class="road road-two"></span><span class="road road-three"></span><span class="map-ring"></span><span class="map-pin"><i></i></span><span class="map-label"><strong>Luma Dental Studio</strong><small>48 Linden Avenue</small></span></div><div class="visit-details"><p class="eyebrow"><span></span> Plan your visit</p><h2>Easy to find.<br><em>Lovely to arrive.</em></h2><div class="visit-info-grid"><div><span>Address</span><p>48 Linden Avenue<br>Sofia, Bulgaria</p></div><div><span>Getting here</span><p>5 minutes from Linden Square<br>Paid parking nearby</p></div><div><span>Monday–Friday</span><p>8:00–19:00</p></div><div><span>Saturday</span><p>9:00–14:00</p></div></div><p class="access-note"><strong>Accessibility:</strong> Step-free entrance, lift access, and an accessible treatment room are available.</p></div></section>
+            <section class="emergency-strip"><div><p class="eyebrow light"><span></span> Dental emergency?</p><h2>Call now. We keep time aside for <em>same-day care.</em></h2></div><a class="button button-light" href="tel:+35924901234">Call +359 2 490 1234 <span aria-hidden="true">→</span></a></section>
+        </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-main"><a class="brand brand-light" href="index.html"><span class="brand-mark">L</span><span>Luma<small>Dental Studio</small></span></a><p>Thoughtful dental care for healthy, confident smiles.</p><div class="footer-links"><div><strong>Explore</strong><a href="#services">Services</a><a href="#about">About us</a><a href="#contact">New patients</a></div><div><strong>Visit</strong><span>48 Linden Avenue</span><a href="tel:+35924901234">+359 2 490 1234</a><a href="mailto:hello@lumadental.bg">hello@lumadental.bg</a></div><div><strong>Hours</strong><span>Mon–Fri: 8:00–19:00</span><span>Saturday: 9:00–14:00</span><span>Sunday: Closed</span></div></div></div>
-        <div class="footer-bottom"><span>© 2026 Luma Dental Studio. All rights reserved.</span><span><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Accessibility</a></span></div>
-    </footer>
+    <footer class="site-footer"><div class="footer-main"><a class="brand brand-light" href="#home" data-tab="home"><span class="brand-mark">L</span><span>Luma<small>Dental Studio</small></span></a><p>Thoughtful dental care for healthy, confident smiles.</p><div class="footer-links"><div><strong>Explore</strong><a href="#services" data-tab="services">Services</a><a href="#about" data-tab="about">About us</a><a href="#enquiry">New patients</a></div><div><strong>Visit</strong><span>48 Linden Avenue</span><a href="tel:+35924901234">+359 2 490 1234</a><a href="mailto:hello@lumadental.bg">hello@lumadental.bg</a></div><div><strong>Hours</strong><span>Mon–Fri: 8:00–19:00</span><span>Saturday: 9:00–14:00</span><span>Sunday: Closed</span></div></div></div><div class="footer-bottom"><span>© 2026 Luma Dental Studio. All rights reserved.</span><span><a href="#home">Privacy</a><a href="#home">Terms</a><a href="#home">Accessibility</a></span></div></footer>
 </body>
 </html>
