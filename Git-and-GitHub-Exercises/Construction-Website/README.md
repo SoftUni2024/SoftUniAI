@@ -1,11 +1,12 @@
 # Luma Dental Studio
 
-A responsive, single-page website for a fictional dental practice. The project presents the studio, its services, patient benefits, contact details, and opening hours in a calm, modern visual style.
+A responsive, single-page website for a fictional dental practice. Home, services, about, and contact content are organized into accessible tabs with shareable URL hashes.
 
 ## Features
 
 - Responsive layouts for desktop, tablet, and mobile screens
-- Sticky header with smooth in-page navigation
+- Sticky tab navigation with URL history and deep links
+- Keyboard navigation with Arrow, Home, and End keys
 - Hero, about, services, patient testimonial, and contact sections
 - Accessible semantic HTML and descriptive labels
 - Click-to-call and email contact links
@@ -16,14 +17,16 @@ A responsive, single-page website for a fictional dental practice. The project p
 
 - HTML5
 - CSS3
+- Vanilla JavaScript
 - Google Fonts
 
 ## Project structure
 
 ```text
 Construction-Website/
-├── index.html   # Page structure and content
-├── style.css    # Layout, colors, typography, and responsive styles
+├── index.html   # All page content and tab panels
+├── styles.css   # Layout, colors, typography, and responsive styles
+├── scripts.js   # Tab navigation, history, and deep links
 └── README.md    # Project documentation
 ```
 
@@ -45,8 +48,8 @@ Then open [http://localhost:8000](http://localhost:8000) in your browser.
 ## Customization
 
 - Edit the page copy and contact details in `index.html`.
-- Change the color palette through the custom properties at the top of `style.css`.
-- Update responsive behavior in the media queries near the bottom of `style.css`.
+- Change the color palette through the custom properties at the top of `styles.css`.
+- Update responsive behavior in the media queries near the bottom of `styles.css`.
 - Replace the fictional address, phone number, and email before using the site publicly.
 
 ## Accessibility
